@@ -11,7 +11,10 @@
 	  gtag('js', new Date());
 
 	  gtag('config', 'G-ZV0B4L7RW1');
-      document.getElementById("rguide").click("../rguide/rguide.html"); 
+      const divElement = document.querySelector('rguide'); 
+      divElement.addEventListener('click', function() {
+      window.location.href = '..rguide/rguide.html'; 
+});
 	</script>
     </head>
     <body>
