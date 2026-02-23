@@ -11,4 +11,61 @@ a {
 
 html { scroll-behavior: smooth; } 
 
+.lecture-section {
+  padding: 60px 20px;
+  background-color: #f4f6f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.lecture-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.lecture-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.lecture-card:hover {
+  transform: translateY(-8px);
+}
+
+.lecture-card h3 {
+  margin-bottom: 15px;
+  color: #1a2a40;
+}
+
+.lecture-card p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  background-color: #2c3e50;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #1abc9c;
+}
+
 
