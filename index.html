@@ -29,6 +29,21 @@
 	  gtag('js', new Date());
 
 	  gtag('config', 'G-ZV0B4L7RW1');
+
+		function sortTable() {
+  let table = document.getElementById("lectureTable");
+  let rows = Array.from(table.rows).slice(1); 
+  let sorted = rows.sort((a, b) =>
+    a.cells[1].innerText.localeCompare(b.cells[1].innerText)
+  );
+
+  sorted.forEach(row => table.tBodies[0].appendChild(row));
+
+  // Update Serial Numbers after sorting
+  sorted.forEach((row, index) => {
+    row.cells[0].innerText = index + 1;
+  });
+}
 	</script>
     </head>
     <body>
@@ -334,7 +349,10 @@
                     <h2>Lecture Notes</h2>
                    
   <div class="table-container">
-    <table class="lecture-table">
+   <button onclick="sortTable()" class="sort-btn">
+    Sort by Course Name (A–Z)
+  </button>
+    <table class="lecture-table"  id="lectureTable">
       <thead>
         <tr>
           <th>SN</th>
