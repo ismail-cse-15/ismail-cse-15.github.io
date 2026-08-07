@@ -44,6 +44,21 @@
     row.cells[0].innerText = index + 1;
   });
 }
+	// presentation	
+function openPresentation(){
+    document.getElementById("presentationModal").style.display="block";
+}
+function closePresentation(){
+    document.getElementById("presentationModal").style.display="none";
+}
+// Close when clicking outside
+window.onclick=function(event){
+    var modal=document.getElementById("presentationModal");
+    if(event.target==modal){
+        modal.style.display="none";
+    }
+}
+		
 
 		
 	</script>
